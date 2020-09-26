@@ -1,0 +1,45 @@
+.main_nav {
+    background-color: rgb(97, 97, 255);
+    
+}
+.main_nav a {
+    color: white;
+}
+.manu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+
+}
+
+.navbar-toggler{
+    background-color: white;
+}
+
+.custom {
+    height: 35px;
+    width: 120px;
+    align-self: center;
+    background: transparent;
+    border: 2px solid lightgray;
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.section_sreach {
+    display: flex;
+    height: 30vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* margin: 60px; */
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
