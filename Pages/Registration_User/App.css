@@ -6,7 +6,10 @@
 body {
   margin: 0;
   padding: 0;
-  background: rgb(6, 73, 197) !important;
+  /* background: rgb(12, 15, 19) !important; */
+  background-image: url(./images/main-background-wave-radar-bottom.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   font-size: 16px;
   color: #222;
   font-family: 'Roboto', sans-serif;
@@ -14,14 +17,21 @@ body {
 }
 
 #login-box {
+  display: flex;
+  justify-content: center;
   position: absolute;
   top: 50%; right: 50%;
   transform: translate(50%,-50%);
-  width: 600px;
+  width: 50%;
   height: 400px;
   background: #FFF;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  background-image: url(./images/freeimg_5545946042freejpg850.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: darkcyan;
 }
 
 .left {
@@ -38,6 +48,27 @@ h1 {
   margin: 0 0 20px 0;
   font-weight: 300;
   font-size: 28px;
+  color: #FFF !important;
+}
+
+.after::after {
+  background: url(./images/Blue.svg) no-repeat top center;
+  content: "";
+  display: block;
+  height: 30px;
+  position: relative;
+  top: 17px;
+  right: 32px;
+  animation:  color-me-in 10s ;
+}
+
+@keyframes color-me-in {
+  /* You could think of as "step 1" */
+  0% {
+
+    right: 100px;
+
+  }
 }
 
 input[type="text"],
@@ -58,16 +89,16 @@ input[type="password"] {
 
 input[type="text"]:focus,
 input[type="password"]:focus {
-  border-bottom: 2px solid #16a085;
+  border-bottom: 2px solid #6864868c;
   color: #16a085;
   transition: 0.2s ease;
 }
 
 input[type="submit"] {
-  margin-top: 28px;
+  margin-top: 8px;
   width: 120px;
   height: 32px;
-  background: #16a085;
+  background: #6864868c;
   border: none;
   border-radius: 2px;
   color: #FFF;
@@ -126,6 +157,7 @@ input[type="submit"]:active {
 }
 
 button.social-signin {
+  display: flex;
   margin-bottom: 20px;
   width: 220px;
   height: 36px;
@@ -166,11 +198,136 @@ button.social-signin.google {
     justify-content: center;
     align-items: end;
     position: relative;
-    bottom: 60px;
+    bottom: 40px;
     right: -147px;
 }
 
 .rotrated_end {
     position: relative;
     left: 100px;
+}
+
+/* ##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px */
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  #login-box {
+    width: 100%;
+  }
+
+.left {
+    padding: 40px;
+    width: 50%;
+  }
+
+input[type="submit"] {
+  margin-top: 5 !important;
+  width: auto;
+  height: auto;
+
+}
+
+.rotrated_end {
+  left: 15px;
+}
+
+.rotrated {
+  margin: 6px 85px;
+  right: -125px;
+}
+body {
+  background: rgb(12, 15, 19) !important;
+}
+
+h1 {
+  font-size: 1.5rem !important;
+}
+
+.after::after {
+  right: 5px;
+}
+}
+
+
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px */
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  #login-box {
+    width: 100%;
+  }
+
+.left {
+    padding: 40px;
+    width: 25%;
+  }
+
+input[type="submit"] {
+  margin-top: 0 !important;
+  width: auto;
+  height: auto;
+
+}
+
+.rotrated_end {
+  left: 15px;
+}
+
+.rotrated {
+  margin: 34px 85px;
+  right: -125px;
+  bottom: 37px;
+}
+body {
+  background: rgb(12, 15, 19) !important;
+}
+}
+
+#error{
+
+  color: red;
+  font-size: 22px;
+  display: none;
+}
+
+
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  #login-box {
+    width: 50%;
+  }
+
+.left {
+    padding: 40px;
+    width:  300px;
+  }
+
+input[type="submit"] {
+  margin-top: 4px;
+  width: 120px;
+  height: 32px;
+
+}
+
+.rotrated_end {
+  left: 60px;
+}
+
+.rotrated {
+  right: -147px;
+  bottom: 37px;
+}
+body {
+  background: rgb(12, 15, 19) !important;
+}
 }

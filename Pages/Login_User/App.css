@@ -1,82 +1,443 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*:focus {
+  outline: none;
 }
 
 body {
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.428571429;
-    color: #333;
+  margin: 0;
+  padding: 0;
+  /* background: rgb(12, 15, 19) !important; */
+  background-image: url(./images/main-background-wave-radar-bottom.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
-.abc {
+
+#login-box {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%; right: 50%;
+  transform: translate(50%,-50%);
+  width: 50%;
+  height: 400px;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  background-image: url(./images/freeimg_5545946042freejpg850.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: darkcyan;
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+}
+
+.login_box {
+  display: flex;
+}
+
+.login_box input {
+  margin: 0px 2px;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 28px;
+  color: #FFF !important;
+}
+
+.after::after {
+  background: url(./images/Blue.svg) no-repeat top center;
+  content: "";
+  display: block;
+  height: 30px;
+  position: relative;
+  top: 17px;
+  right: 53px;
+  animation:  color-me-in 10s ;
+}
+
+@keyframes color-me-in {
+  /* You could think of as "step 1" */
+  0% {
+
+    right: 100px;
+
+  }
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 2px solid #6864868c;
+  color: #16a085;
+  transition: 0.2s ease;
+}
+
+input[type="submit"] {
+  margin-top: 8px;
+  width: 120px;
+  height: 32px;
+  background: #6864868c;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+input[type="submit"]:active {
+  opacity: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+.or {
+  position: absolute;
+  top: 180px;
+  left: 280px;
+  width: 40px;
+  height: 40px;
+  background: #DDD;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 40px;
+  text-align: center;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 2px 2px 0;
+}
+
+.right .loginwith {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 23px;
+  color: #f7f7f7;
+  text-align: center;
+}
+
+.loginwith::after {
+  background: url(./images/Aqua.svg) no-repeat top center;
+  content: "";
+  display: block;
+  height: 30px;
+  position: relative;
+  top: 17px;
+  animation:  up-me-in 10s ;
+}
+
+@keyframes up-me-in {
+  /* You could think of as "step 1" */
+  0% {
+
+    top: 50px;
+
+  }
+ 
+}
+
+button.social-signin {
+  display: flex;
+  margin-bottom: 20px;
+  width: 220px;
+  height: 36px;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+button.social-signin:hover,
+button.social-signin:focus {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin.facebook {
+  background: #32508E;
+}
+
+button.social-signin.twitter {
+  background: #55ACEE;
+}
+
+button.social-signin.google {
+  background: #DD4B39;
+}
+
+.rotrated {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: relative;
+  bottom: -91px;
+  right: 38px;
+}
+
+.rotrated_end {
+  position: relative;
+  left: 5px;
+}
+
+/* ##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px */
+
+
+@media (min-width: 320px) and (max-width: 479px) {
+
+  #login-box {
     width: 100%;
-}
-.flex-box {
-    display: flex;
-    flex-direction: row;
-    padding: 25px 15px;
-    flex-flow: row;
-    justify-content: space-between;
+  }
 
-}
-
-.fex-col-1 {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-}
-.logo {
-
-    width: 20%;
-    background-color: white;
-}
-
-.logo img{
-
-    object-fit: contain;
-    width: 300%;
-}
-.search-button {
-    width: 10%;
-}
-.btn-search {
-
-    background-color: black;
-    color: white;
-    padding: 2px 1pc;
-}
-
-.icon {
-    display: flex;
-    place-self: flex-end;
-}
-.icon img {
-    margin: 10px;
-}
-.text-box {
-    display: flex;
-    font-size: 12px;
-
-}
-
-
-.text-box hr {
+  .right .loginwith {
+    right: 11px;
     position: relative;
-    top: 10%;
-    right: auto;
-    right: 0;
-    height: 12px;
-    width: 1px;
-    background: rgb(185 185 185);;
-    margin-top: -1px;
-    margin: 0 8px;
+
 }
 
-/* menu */
+.right {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 50px;
+}
+
+.or {
+  position: absolute;
+  top: 219px;
+  left: 299px;
+}
+
+.rotrated {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 24px;
+  bottom: -161px;
+}
+
+.rotrated_end {
+  left: 15px;
+}
+
+
+body {
+  background: rgb(12, 15, 19) !important;
+}
+
+h1 {
+  font-size: 1.5rem !important;
+}
+
+.left {
+
+  position: absolute;
+  top: 64px;
+  left: 27px;
+
+}
+.after {
+  position: relative;
+  left: 64px;
+}
+.after::after {
+  right: 75px;
+}
+}
+
+
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px */
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  #login-box {
+    width: 100%;
+  }
+
+.left {
+  position: absolute;
+  top: 77px;
+  left: 88px;
+  }
+
+  .after {
+    position: relative;
+    left: 64px;
+  }
+  .after::after {
+    right: 50px;
+  }
+
+input[type="submit"] {
+  margin-top: 0 !important;
+  width: auto;
+  height: auto;
+
+}
+
+.rotrated_end {
+  left: 15px;
+}
+
+.right {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 127px;
+}
+
+.or {
+  position: absolute;
+  top: 219px;
+  left: 415px;
+}
+
+.rotrated {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 24px;
+  bottom: -161px;
+}
+body {
+  background: rgb(12, 15, 19) !important;
+}
+}
+
+#error{
+
+  color: red;
+  font-size: 22px;
+  display: none;
+}
 
 
 
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
 
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  #login-box {
+    width: 50%;
+  }
+
+  .left {
+    position: absolute;
+    top: 55px;
+    left: -26px;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+}
+
+.right {
+  position: absolute;
+  top: -6px;
+  right: -39px;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 2px 2px 0;
+}
+
+.or {
+    position: absolute;
+    top: 229px;
+    left: 238px;
+    width: 35px;
+    height: 35px;
+    background: #DDD;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    line-height: 40px;
+    text-align: center;
+}
+
+input[type="submit"] {
+  margin-top: 4px;
+  width: 120px;
+  height: 32px;
+
+}
+
+.rotrated_end {
+  left: 60px;
+}
+
+.rotrated {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: -180px;
+  right: 38px;
+}
+body {
+  background: rgb(12, 15, 19) !important;
+}
+}

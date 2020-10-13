@@ -22,6 +22,15 @@ function hideLoader() {
   }
   /* Loader End */
 
+var userID = localStorage.getItem("userId");
+
+if (userID === null) {
+    window.location.href="../Registration_User/index.html"
+    alert("Please Login First")
+    }
+
+console.log(userID)
+
 function submitAdForm() {
 
     var title = document.getElementById("adTitle").value;
@@ -30,12 +39,12 @@ function submitAdForm() {
     var price = document.getElementById("price").value;
     var name = document.getElementById("Name").value;
     var MoblieNumber = document.getElementById("Number").value;
-    var categoryLocation = document.getElementById("city").value;
+    var Location = document.getElementById("city").value;
     var typeError = document.getElementById("error");
     
     typeError.innerHTML = " ";
 
-        if(title == " " || description == " " || MoblieNumber == " " || category == " "|| categoryLocation == "" ||price == " " ){
+        if(title == " " || description == " " || MoblieNumber == " " || category == " "|| Location == "" ||price == " " ){
 
             typeError.style.display="block"
             typeError.innerHTML="Please Fill All Feilds"
@@ -44,8 +53,6 @@ function submitAdForm() {
     // console.log(title ,description , category , price , )
 
 
-    // Upload the file and metadata
-    // var uploadTask = storageRef.child('Ads/').put(file, metadata);
 
 
     // //Uploading Image To Storage 
@@ -79,13 +86,16 @@ function submitAdForm() {
                 price: price,
                 name: name,
                 MoblieNumber: MoblieNumber,
-                url: url,
+                img: url,
+                Location: Location
+
             }).then(function (docRef) {
                 showLoader()
             error.style.color="green"
             error.style.display="block"
             error.innerHTML="Your Ad Has Been Posted"
             console.log("Document written with ID: ", docRef.id);
+            localStorage.setItem('USERID' , docRef.id);
             setTimeout(function(){
 
                 window.location.href="../My account/account.html"
@@ -97,5 +107,14 @@ function submitAdForm() {
                     p.innherHTML = error;
                 });
         });
+
+}
+
+function logout(){
+
+
+    localStorage.clear();
+    window.location.href="../../index.html"
+
 
 }

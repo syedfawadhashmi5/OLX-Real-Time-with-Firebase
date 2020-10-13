@@ -18,34 +18,35 @@
 
     <div id="login-box">
         <div class="left">
-          <h1>Sign up</h1>
+          <h1 class="after">Sign up</h1>
           
           <input type="text" name="username" placeholder="Username" id="username" />
           <input type="text" name="email" placeholder="E-mail"  id="email"/>
           <input type="password" name="password" placeholder="Password" id="password"/>
-          <input type="password" name="password2" placeholder="Retype password" id="password"/>
+          <input type="password" name="password2" placeholder="Retype password" id="password2"/>
           <input type="file" name="image"  id="image_file"/>
 
 
           <input type="submit" name="signup_submit" value="Sign me up" onclick="signUpsubmit()"/>
-          &amp;	
           <div class="rotrated">
-          <input type="submit" name="signup_submit" value="Login me" />
+          <input type="submit" name="signup_submit" onclick="window.location='../Login_User/index.html'" value="Login me" />
           <div class="rotrated_end">
-            <input type="submit" name="signup_submit" value="Back Home" />
+            <input type="submit" name="signup_submit" onclick="window.location='../../index.html'" value="Back Home" />
           </div>
         </div>
 
         </div>
         
-        <div class="right">
-          <span class="loginwith">Sign in with<br />social network</span>
+        <p id="error">
+          Error
+        </p>
+          
+          <!-- <span class="loginwith">Sign in with<br />social network</span>
           
           <button class="social-signin facebook">Log in with facebook</button>
           <button class="social-signin twitter">Log in with Twitter</button>
-          <button class="social-signin google">Log in with Google+</button>
-        </div>
-        <div class="or">OR</div>
+          <button class="social-signin google">Log in with Google+</button> -->
+        <!-- <div class="or">OR</div> -->
       </div>
 
  

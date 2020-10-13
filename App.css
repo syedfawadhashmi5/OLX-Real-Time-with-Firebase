@@ -1,3 +1,10 @@
+body{
+  background-image: url(./images/main-background-half-oval-left.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: darkcyan;
+}
+
 .main_nav {
     background-color: rgb(97, 97, 255);
     
@@ -11,6 +18,12 @@
     justify-content: flex-end;
     width: 100%;
 
+}
+
+.carousel-item {
+
+  height: 25rem;
+  
 }
 
 .navbar-toggler{
@@ -43,3 +56,244 @@
     align-items: center;
 }
 
+.manu_login {
+
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  
+}
+
+.image_user {
+  width: 10%;
+  border-radius: 100%;
+}
+
+.text_user {
+
+  font-size: 15px;
+  position: relative;
+  left: 6px;
+  color: white;
+
+}
+
+.Login_user {
+
+  position: relative;
+  left: 13px;
+  bottom: 3px;
+  width: 10%
+
+}
+
+.Login_user img{
+  width: 66%;
+  position: relative;
+  top: 11px;
+  cursor: pointer;
+}
+
+
+/* center container in the middle */
+
+
+
+
+
+
+p {
+  font-size: 1.6em;
+  color: #3e3e3e;
+}
+
+h1,h3 {
+  font-size: 1.2em;
+  color: #4E4E4E;
+  margin-top: -5px;
+}
+
+h2 {
+  color: #C3A1A0;
+  margin-top: -5px;
+}
+
+
+
+.product {
+    padding: 50px 0px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+
+.heading{
+    font-size: 50px;
+}
+
+
+
+.card:hover {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+
+  .card{
+
+    margin: 5px;
+    border-radius: 10px;
+    
+  }
+
+
+  .card img{
+    display: block;
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+  } 
+
+
+  .card-title {
+    margin-top:0px;
+    font-weight: 700;
+    font-size: 1.65em;
+  }
+
+
+  #card-price{
+
+    color: #000000;
+  }
+
+
+
+
+  .product_view .modal-dialog{max-width: 800px; width: 100%;}
+  .pre-cost{text-decoration: line-through; color: #a5a5a5;}
+  .space-ten{padding: 10px 0;}
+
+  .fade {
+    opacity: 0;
+    -webkit-transition: opacity 1s linear;
+    transition: opacity 1s linear;
+}
+
+#cross{
+
+margin-right: 150px;
+}
+
+
+.loader {
+    background: none repeat scroll 0 0 rgb(252, 252, 252);
+    position: fixed;
+    display: block;
+    opacity: 0.5;
+    z-index: 1000001; 
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+        
+    }
+    
+    .loader img {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin: -500px 0px 0px -100px;
+    width: 200px;
+    }
+
+/* ##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px */
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .manu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.manu_login {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.text-center {
+  text-align: center !important;
+  display: block !important;
+}
+
+.carousel-item {
+
+  height: 19rem;
+  
+}
+
+}
+
+.SearchDiv{
+
+  background: url("Images/searchbackground.png") center center no-repeat;
+  background-repeat: no-repeat;        
+  position: relative;        
+  margin-left: auto;      
+  margin-right: auto;   
+  
+  display: flex;
+ flex-direction: row;
+ justify-content:space-evenly;
+ flex-wrap: wrap;
+}
+
+.displayHide {
+  display: none;
+}
+
+.displayshow {
+  display: block;
+}
+
+.displayshow2 {
+  font-size: 13px;
+  color: #ffff;
+  cursor: pointer;
+}
+
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px */
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .carousel-item {
+
+    height: 19rem;
+    
+  }
+ 
+}
+
+
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .carousel-item {
+
+    height: 25rem;
+    
+  }
+
+}
