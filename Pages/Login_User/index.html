@@ -17,7 +17,7 @@
 <body>
 
     <div id="login-box">
-        <div class="left">
+        <div class="left" id="left">
           <h1 class="after">Login</h1>
           
           <input type="text" name="email" placeholder="E-mail"  id="email"/>
@@ -30,9 +30,9 @@
         </div>
 
           <div class="rotrated">
-          <input type="submit" name="signup_submit" onclick="window.location='../Registration_User/index.html'" value="Sign me up" />
+          <input type="submit" name="signup_submit" onclick="window.location='http://register-from.surge.sh/'" value="Sign me up" />
           <div class="rotrated_end">
-            <input type="submit" name="signup_submit" onclick="window.location='../../index.html'" value="Back Home" />
+            <input type="submit" name="signup_submit" onclick="window.location='https://web-app-olx-v1.web.app'" value="Back Home" />
           </div>
         </div>
 
@@ -41,15 +41,15 @@
           Error
         </p>
           
-        <div class="right">
+        <div class="right" id="right">
 
           <span class="loginwith">Sign in with<br />social network</span>
           
-          <button class="social-signin facebook">Log in with facebook</button>
-          <button class="social-signin twitter">Log in with Twitter</button>
-          <button class="social-signin google">Log in with Google+</button>
+          <button class="social-signin facebook" onclick="login_facebook()">Log in with facebook</button>
+          <button class="social-signin google" onclick="login_google()">Log in with Google+</button>
       </div>
-      <div class="or">OR</div>
+      <div class="or" onclick="change_screen()" id="back_btn">OR</div>
+      <img src="./images/back-arrow.png" alt="" style="display: none; background: none;" onclick="back_Btn()" id="back_image">
     </div>
  
 
@@ -96,6 +96,7 @@
 var database = firebase.database();
 
 </script>
+
 
 <script src="./login.js"></script>
 

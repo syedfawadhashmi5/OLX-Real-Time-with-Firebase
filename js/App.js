@@ -67,10 +67,16 @@ var username = document.getElementById("user_name");
 var userId = localStorage.getItem('userId');
 
 
+
 if (userId == userId) {
   var userInfo = localStorage.getItem('userInfo');
   userName = JSON.parse(userInfo).profileName;
   userimage = JSON.parse(userInfo).profile_picture;
+
+  userInfo = localStorage.getItem('user');
+  userName = JSON.parse(userInfo).username;
+  userimage = JSON.parse(userInfo).userimage;
+
   username.innerHTML = userName;
   userImage.src = `${userimage}`
 

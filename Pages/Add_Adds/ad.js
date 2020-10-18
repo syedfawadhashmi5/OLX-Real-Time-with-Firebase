@@ -25,8 +25,11 @@ function hideLoader() {
 var userID = localStorage.getItem("userId");
 
 if (userID === null) {
-    window.location.href="../Registration_User/index.html"
-    alert("Please Login First")
+
+    window.location.href="http://register-from.surge.sh/";
+
+   alert(` job is not done! Please Login First!`);
+
     }
 
 console.log(userID)
@@ -114,7 +117,7 @@ function logout(){
 
 
     localStorage.clear();
-    window.location.href="../../index.html"
+    window.location.href="https://web-app-olx-v1.web.app"
 
 
 }

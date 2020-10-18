@@ -1,7 +1,8 @@
 
 
 body{
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-family: cursive;
+color: #ffffff;
 }
 
 /* Header Start */
@@ -63,7 +64,7 @@ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   
 
 hr {
-    border: 1px solid #c2040400;
+    border: 1px solid #fbfbfb00;
     margin-bottom: 25px;
   }
   
@@ -75,20 +76,32 @@ hr {
 
   .AdFormMain{
 
-    background-color:#e69035;
+    background-image: url(./images/main-background-wave-radar-bottom.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: darkcyan;
     opacity: 0.9;
     padding: 50px;
     border-radius: 10px;
   }
 
   #title2{
-      margin-left: 70px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
   }
 
-
+  .back_ing {
+    width: 4%;
+    display: flex;
+    position: relative;
+    bottom: 75px;
+    cursor: pointer;
+  }
 
 #AdDescriptionTextArea{
-  margin-left: 20px;
+margin-left: 20px;
 box-shadow: 0 2px 0 #e6e6e6;
 height: 40px;
 padding-left: 10px;
@@ -129,3 +142,16 @@ height: 200px;
   
   }
 /* Loader */
+
+
+/* ##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px */
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .back_ing {
+    min-width: 15%;
+  }
+
+}

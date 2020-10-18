@@ -145,6 +145,9 @@ h2 {
 
     margin: 5px;
     border-radius: 10px;
+    border: 1px solid rgba(0,0,0,4.125) !important;
+    border-radius: 2.25rem !important;
+    background-color: unset !important;
     
   }
 
