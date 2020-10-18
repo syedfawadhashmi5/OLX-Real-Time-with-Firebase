@@ -74,6 +74,6 @@ function signUpsubmit() {
 
 function redirected() {
 
-    window.location.href = "https://email-password-fa46d.web.app"
+    window.location.href = "../user_login.html"
 
 }

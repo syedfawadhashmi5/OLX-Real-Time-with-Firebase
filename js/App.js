@@ -73,9 +73,9 @@ if (userId == userId) {
   userName = JSON.parse(userInfo).profileName;
   userimage = JSON.parse(userInfo).profile_picture;
 
-  userInfo = localStorage.getItem('user');
-  userName = JSON.parse(userInfo).username;
-  userimage = JSON.parse(userInfo).userimage;
+  var userInfof = localStorage.getItem('user');
+  userName = JSON.parse(userInfof).username;
+  userimage = JSON.parse(userInfof).userimage;
 
   username.innerHTML = userName;
   userImage.src = `${userimage}`

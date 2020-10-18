@@ -52,7 +52,7 @@ function reset_password() {
 
 function redirected() {
 
-    window.location.href = "https://web-app-olx-v1.web.app";
+    window.location.href = "../index.html";
 
 
 
